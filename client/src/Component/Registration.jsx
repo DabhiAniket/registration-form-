@@ -16,6 +16,8 @@ function Registration() {
     e.preventDefault();
     await axios.post("http://localhost:5000/register", form);
     alert("Registered Successfully");
+
+    setForm({ name: "", email: "", password: "" });
   };
 
   return (

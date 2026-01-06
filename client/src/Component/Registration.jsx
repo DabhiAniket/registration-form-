@@ -15,9 +15,10 @@ function Registration() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await axios.post("http://localhost:5000/register", form);
+    setForm({ name: "", email: "", password: "" });
     alert("Registered Successfully");
 
-    setForm({ name: "", email: "", password: "" });
+    
   };
 
   return (
@@ -31,6 +32,7 @@ function Registration() {
 
         <input
             name="name"
+            value={form.name}
             placeholder="Name"
             onChange={handleChange}
             className="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-800
@@ -40,6 +42,7 @@ function Registration() {
 
         <input
             name="email"
+            value={form.email}
             type="email"
             placeholder="Email"
             onChange={handleChange}
@@ -50,6 +53,7 @@ function Registration() {
 
         <input
             name="password"
+            value={form.password}
             type="password"
             placeholder="Password"
             onChange={handleChange}

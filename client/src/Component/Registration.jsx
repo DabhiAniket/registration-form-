@@ -33,6 +33,7 @@ function Registration() {
         <input
             name="name"
             value={form.name}
+            required
             placeholder="Name"
             onChange={handleChange}
             className="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-800
@@ -43,6 +44,7 @@ function Registration() {
         <input
             name="email"
             value={form.email}
+            required
             type="email"
             placeholder="Email"
             onChange={handleChange}
@@ -54,6 +56,7 @@ function Registration() {
         <input
             name="password"
             value={form.password}
+            required
             type="password"
             placeholder="Password"
             onChange={handleChange}
